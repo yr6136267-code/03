@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>Hello</h1>
+    <script>
+       
+        const student={
+             name: "yash",
+             roll: 2616400049,
+             city:"gurgaon",
+             college:"zenith school of ai"};
+            student.phone=8776557;
+        console.log(student);
+
+
+        
+    //  let x=5;
+    //  console.log(x);
+    //  let y=10;
+    //  console.log(y);
+    // if (true){
+    //     let a="I am var";
+    //     let b="I am let";
+    //     console.log("inside",a);
+    //     console.log("inside",b);}
+    //     console.log("outside",a);
+    //     console.log("outside",b);
+
+    // console.log(x)
+    // let x= 5;
+    //  let str=prompt("enter your full name");
+    //  let str1=str.trim();
+    //  let l1=str1.length;
+    //  let s1=`@${str1}${l1}`;
+    //  console.log(s1);
+    
+    // let s1=[]; 
+    // let req = prompt("enter your request: ")
+    // while (true)
+    // {
+    //     let s= prompt ("enter your task");
+    //     if (s=="add"){
+    //         prompt("enter what you want to add");
+    //        s2= s1.push();
+    //     }
+    //     if (s=="list"){
+    //         for (let i =0;i<s2.length;i++)
+    //     {
+//     //         console.log(s2[i]);
+//     //     }}
+//     //     if (s=="delete")
+//     //     {
+//     //         prompt("enter what you want to delete");
+//     //         s2=s1.pop();
+//     //     }
+//     //     if (s=="quit"){
+//     //         console.log("you quitted");
+//     //         break;
+//     // }}
+   
+//     // let todo = []
+//     // let req = prompt("enter your reaquest: ")
+
+//     // while(true){
+//     //     if(req == "quit"){
+//     //         console.log("you quit!!")
+//     //         break;
+//     //     }
+
+//     //     if(req == "add"){
+//     //         let task = prompt("what you want to add: ")
+//     //         todo.push(task)
+//     //         console.log("task added")
+//     //     }else if(req == "list"){
+//     //         for(item of todo){
+//     //             console.log(item)
+//     //         }
+//     //         console.log("item listed")
+//     //     }else if(req == "delete"){
+//     //         todo.pop()
+//     //         console.log("task deleted")
+//     //     }
+
+//     //     req = prompt("enter your request:")
+//     // }
+//    const data= {
+//   "products":[
+//     {
+//       "id": 26,
+//       "title": "Green Chili Pepper",
+//       "price": 0.99
+//     },
+//     {
+//       "id": 27,
+//       "title": "Honey Jar",
+//       "price": 6.99
+//     },
+//     {
+//       "id": 28,
+//       "title": "Ice Cream",
+//       "price": 5.49
+//     },
+//     {
+//       "id": 29,
+//       "title": "Juice",
+//       "price": 3.99
+//     },
+//     {
+//       "id": 30,
+//       "title": "Kiwi",
+//       "price": 2.49
+//     },
+//     {
+//       "id": 31,
+//       "title": "Lemon",
+//       "price": 0.79
+//     },
+//     {
+//       "id": 32,
+//       "title": "Milk",
+//       "price": 3.49
+//     },
+//     {
+//       "id": 33,
+//       "title": "Mulberry",
+//       "price": 4.99
+//     },
+//     {
+//       "id": 34,
+//       "title": "Nescafe Coffee",
+//       "price": 7.99
+//     },
+//     {
+//       "id": 35,
+//       "title": "Potatoes",
+//       "price": 2.29
+//     }
+//   ],
+//   "total": 194,
+//   "skip": 25,
+//   "limit": 10
+// }
+// let i=0;
+// const n= data["products"].length;
+// while(i<n){
+//     console.log(data["products"][i]["title"]);
+//     i+=1;
+// }
+// const std1={ city: "d",roll:"2",hobbies:["p","d","r"]}
+// const{hobbies,roll,country}=std1;
+// console.log(hobbies[0])
+// let i=prompt("how old are you?");
+// console.log(`next year u eill be ${i+1}.`);
+let total = 0;
+let t = "yes";
+
+while (t === "yes") {
+  const title = prompt("Item title?");
+  const price = parseFloat(prompt("Item price?"));
+
+  if (!isNaN(price)) {
+    total += price;
+  }
+
+  t= prompt("Add another? (yes/no)").trim().toLowerCase();
+}
+
+alert("Final total: $" + total.toFixed(2));
+
+    </script>
+    
+</body>
+</html>
