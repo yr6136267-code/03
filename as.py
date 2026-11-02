@@ -37,7 +37,7 @@
 #         c+=1
 # print(c)
 
-# r = int(input()) // MATRIX TOTAL
+# r = int(input()) // matrix total
 # c = int(input())
 
 # a = []
@@ -55,8 +55,9 @@
 #         s += a[i][j]
 #         j += 1
 #     i += 1
+# print(s)
 
-n = int(input())
+n = int(input()) 
 m = [list(map(int, input().split())) for i in range (n)]
 s=0
 s1=0
@@ -65,3 +66,88 @@ for i in range (0,n):
     s1=s1+m[i][n-1-i]
 print(s,s1)
 
+# r, c = map(int, input().split()) // Transpose of a matrix
+# m = [list(map(int, input().split())) for i in range(r)]
+
+# for j in range(c):
+#     for i in range(r):
+#         print(m[i][j], end=" ")
+#     print()
+
+# r, c = map(int, input().split()) // Diagonal traversal
+# m = [list(map(int, input().split())) for i in range(r)]
+
+# for s in range(r + c - 1):
+#     for i in range(r):
+#         j = s - i
+#         if j>=0 and j<c:
+#             print(m[i][j], end=" ")
+#     print()
+
+
+# r, c = map(int, input().split()) // zig zag trversal
+# m = [list(map(int, input().split())) for i in range(r)]
+# res = []
+# for s in range(r + c - 1):
+#     diag = [m[i][s - i] for i in range(r) if 0 <= s - i < c]
+#     if s % 2 == 0:
+#         diag.reverse()
+#     res += diag
+# print(*res)
+# n = int(input())
+# i = 1
+# while i<=n:
+#     print(" "*(2*n-i),end="")
+#     j = i
+#     while j>=1:
+#         print(j,end="")
+#         j-=1
+#     k=j
+#     while k<=i:
+#         print("",end="")
+#         k+=1
+#     print()
+#     i+=1
+# n = int(input())
+# i = 1
+# while i <= n:
+#     print("  " * (n - i), end="")
+#     j = i
+#     while j >= 1:
+#         print(j, end="")
+#         if j > 1:
+#             print(" ", end="")
+#         j -= 1
+#     print()
+#     i += 1
+
+# n = int(input()) // Square Spiral
+# a = [[0]*n for i in range(n)]
+# t, b, l, r = 0, n-1, 0, n-1
+# num = 1
+
+# while t <= b and l <= r:
+#     for i in range(l, r+1):        
+#         a[t][i] = num
+#         num += 1
+#     t += 1
+
+#     for j in range(t, b+1):        
+#         a[j][r] = num
+#         num += 1
+#     r -= 1
+
+#     if t <= b:
+#         for i in range(r, l-1, -1):  
+#             a[b][i] = num
+#             num += 1
+#         b -= 1
+
+#     if l <= r:
+#         for j in range(b, t-1, -1):  
+#             a[j][l] = num
+#             num += 1
+#         l += 1
+
+# for row in a:
+#     print("".join(f"{k:3}" for k in row))
