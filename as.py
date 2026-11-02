@@ -57,7 +57,7 @@
 #     i += 1
 
 n = int(input())
-m = list(map(int, input().split())) 
+m = [list(map(int, input().split())) for i in range (n)]
 s=0
 s1=0
 for i in range (0,n):
