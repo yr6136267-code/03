@@ -66,7 +66,7 @@
 #     s1=s1+m[i][n-1-i]
 # print(s,s1)
 
-# r, c = map(int, input().split()) // Transpose of a matrix
+# r, c = map(int, input().split()) // transpose of a matrix
 # m = [list(map(int, input().split())) for i in range(r)]
 
 # for j in range(c):
@@ -152,18 +152,30 @@
 # for row in a:
 #     print("".join(f"{k:3}" for k in row))
 
-# n=int(input()) // Butterfly Pattern
-# for i in range (1,n+1):
-#     for j in range (1,(2*n)+1):
-#         if j>i and j<=(2*n)-i:
-#             print(" ",end="")
+n=int(input())
+for i in range (1,n+1):
+    for j in range (1,(2*n)+1):
+        if j>i and j<=(2*n)-i:
+            print(" ",end="")
+        else:
+            print("*",end="")
+    print()
+for i in range (n-1,0,-1):
+    for j in range (1,(2*n)+1):
+        if j>i and j<=(2*n)-i:
+            print(" ",end="")
+        else:
+            print("*",end="")
+    print()
+
+# n = int(input())
+# a = []
+# for i in range(1, n + 1):
+#     r = []
+#     for j in range(i):
+#         if j == 0 or j == i - 1:
+#             r.append(1)
 #         else:
-#             print("*",end="")
-#     print()
-# for i in range (n-1,0,-1):
-#     for j in range (1,(2*n)+1):
-#         if j>i and j<=(2*n)-i:
-#             print(" ",end="")
-#         else:
-#             print("*",end="")
-#     print()
+#             r.append(a[j - 1] + a[j])
+#     print(" ".join(str(x) for x in r))
+#     a= r

@@ -157,21 +157,127 @@
 // console.log(hobbies[0])
 // let i=prompt("how old are you?");
 // console.log(`next year u eill be ${i+1}.`);
-let total = 0;
-let t = "yes";
+// Q1
+// function cubeNumber(n) {
+//   return n * n * n;
+// }
+// let n = prompt("enter number")
+// let v=cubeNumber(n);
+// console.log(v);
+// 
+// function isAdult(age) {
+//   if (age >= 18) {
+//     return true;
 
-while (t === "yes") {
-  const title = prompt("Item title?");
-  const price = parseFloat(prompt("Item price?"));
+//   }
+//   else{
+//     return false;
+//   }
+// }
+// let age = prompt("enetr age");
+// console.log(isAdult(age));
 
-  if (!isNaN(price)) {
-    total += price;
+// Q3
+// let bmi;
+// function calculateBMI(weight, height) {
+//    bmi = weight / (height * height);
+//   return bmi;
+// }
+// let w=prompt("enetr weight");
+// let h =prompt("enter height");
+// console.log(calculateBMI(w,h)); 
+
+// Q4
+// function gradeFromMarks(marks) {
+//   if (marks >= 90) return "A";
+//   if (marks >= 75) return "B";
+//   if (marks >= 50) return "C";
+//   return "F";
+// }
+// let marks=prompt("enetetr marks");
+// console.log(gradeFromMarks(marks));
+
+ // Q5
+// function applyDiscount(price, isMember = false) {
+//   if (isMember) return price * 0.9;
+//   return price;
+// }
+// let price=prompt("enter price");
+// let isMember = prompt("are you a member?");
+// console.log(applyDiscount(price,isMember));
+
+// Q6
+// function countVowels(word) {
+//   let c = 0;
+//   let word1=word.toLowerCase();
+//   for (let i = 0; i < word1.length; i++) {
+//     const ch = word1[i];
+//     if (ch === "a" || ch === "e" || ch === "i" || ch === "o" || ch === "u") {
+//       c++;
+//     }
+//   }
+//   return c;
+// }
+// let word=prompt("enter word");
+// console.log(countVowels(word));
+
+//Q7
+// function square(n) { 
+//     return n * n; }
+// function cube(n) { 
+//     return n * n * n; }
+// function sumOfSquareAndCube(n) {
+//   return square(n) + cube(n);
+// }
+// let n=prompt("enter number");
+// console.log(sumOfSquareAndCube(n));
+
+//Q9
+// function isPositive(n) { 
+//     return n >= 0; }
+// function absoluteValue(n) {
+//   if (n < 0) return -n;
+//   return n;
+// }
+// function safeSquareRoot(n) {
+//   if (isPositive(n)) {
+//     return Math.sqrt(n);
+//   }
+//   return Math.sqrt(absoluteValue(n));
+// }
+// let n=prompt("enetr number");
+// console.log(safeSquareRoot(n));
+
+//Q10
+// function findMax(arr){
+//     let c=0;
+//     let max=arr[0];
+//     for(let i=0;i<arr.length;i++){
+//         if (arr[i]>arr[i+1]){
+//             max=arr[i];
+//         }
+        
+//     }
+//     return max;
+// }
+// let arr=[7,8,9,10,5,14];
+// console.log(findMax(arr));
+
+
+// Q11
+function totalPrice(products) {
+  let total = 0;
+  for (let i = 0; i < products.length; i++) {
+    total += products[i].price;
   }
-
-  t= prompt("Add another? (yes/no)").trim().toLowerCase();
+  return total;
 }
-
-alert("Final total: $" + total.toFixed(2));
+const products = [
+{ title: "Pen", price: 10 },
+{ title: "Notebook", price: 45 },
+{ title: "Bag", price: 500 }
+];
+console.log(totalPrice(products));
 
     </script>
     
