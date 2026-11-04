@@ -86,21 +86,21 @@
    
 
 
-r, c = map(int, input().split())
-m = [list(map(int, input().split())) for i in range(r)]
+# r, c = map(int, input().split())// zigzag traversal
+# m = [list(map(int, input().split())) for i in range(r)]
 
-res = [] 
-for d in range(r + c - 1):
-    diag = []
-    for i in range(r):
-        j = d - i
-        if 0 <= j < c:
-            diag.append(m[i][j])
-    if d % 2 == 0:
-        diag.reverse()
-    res += diag
+# res = [] 
+# for d in range(r + c - 1):
+#     diag = []
+#     for i in range(r):
+#         j = d - i
+#         if 0 <= j < c:
+#             diag.append(m[i][j])
+#     if d % 2 == 0:
+#         diag.reverse()
+#     res += diag
 
-print(*res)
+# print(*res)
 
 # n = int(input())
 # i = 1
@@ -194,3 +194,26 @@ print(*res)
 #     b.append(temp)
 #     col+=1
 # print(b)
+
+# n, m = map(int, input().split())// codeforces 34B-4
+# prices = list(map(int, input().split()))
+# earn = 0
+# for i in range(m):
+#     if prices[i] < 0:
+#         earn += -prices[i]
+# print(earn)
+
+# t = int(input())//codeforces 1360B-29
+# for i in range(t):
+#     n = int(input())
+#     s = list(map(int, input().split()))
+
+#     s.sort()
+
+#     ans = s[1]-s[0]
+#     for i in range(n - 1):
+#         diff = s[i + 1] - s[i]
+#         if diff < ans:
+#             ans = diff
+
+#     print(ans)
