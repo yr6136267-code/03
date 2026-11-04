@@ -74,40 +74,34 @@
 #         print(m[i][j], end=" ")
 #     print()
 
-# r, c = map(int, input().split()) // Diagonal traversal
+# r, c = map(int, input().split()) //Diagonal traversal
 # m = [list(map(int, input().split())) for i in range(r)]
 
-# for s in range(r + c - 1):
+# for d in range(r + c - 1):
 #     for i in range(r):
-#         j = s - i
+#         j = d- i
 #         if j>=0 and j<c:
 #             print(m[i][j], end=" ")
-#     print()
+    
+   
 
 
-# r, c = map(int, input().split()) // zig zag trversal
-# m = [list(map(int, input().split())) for i in range(r)]
-# res = []
-# for s in range(r + c - 1):
-#     diag = [m[i][s - i] for i in range(r) if 0 <= s - i < c]
-#     if s % 2 == 0:
-#         diag.reverse()
-#     res += diag
-# print(*res)
-# n = int(input())
-# i = 1
-# while i<=n:
-#     print(" "*(2*n-i),end="")
-#     j = i
-#     while j>=1:
-#         print(j,end="")
-#         j-=1
-#     k=j
-#     while k<=i:
-#         print("",end="")
-#         k+=1
-#     print()
-#     i+=1
+r, c = map(int, input().split())
+m = [list(map(int, input().split())) for i in range(r)]
+
+res = [] 
+for d in range(r + c - 1):
+    diag = []
+    for i in range(r):
+        j = d - i
+        if 0 <= j < c:
+            diag.append(m[i][j])
+    if d % 2 == 0:
+        diag.reverse()
+    res += diag
+
+print(*res)
+
 # n = int(input())
 # i = 1
 # while i <= n:
@@ -152,23 +146,23 @@
 # for row in a:
 #     print("".join(f"{k:3}" for k in row))
 
-n=int(input())
-for i in range (1,n+1):
-    for j in range (1,(2*n)+1):
-        if j>i and j<=(2*n)-i:
-            print(" ",end="")
-        else:
-            print("*",end="")
-    print()
-for i in range (n-1,0,-1):
-    for j in range (1,(2*n)+1):
-        if j>i and j<=(2*n)-i:
-            print(" ",end="")
-        else:
-            print("*",end="")
-    print()
+# n=int(input())
+# for i in range (1,n+1):
+#     for j in range (1,(2*n)+1):
+#         if j>i and j<=(2*n)-i:
+#             print(" ",end="")
+#         else:
+#             print("*",end="")
+#     print()
+# for i in range (n-1,0,-1):
+#     for j in range (1,(2*n)+1):
+#         if j>i and j<=(2*n)-i:
+#             print(" ",end="")
+#         else:
+#             print("*",end="")
+#     print()
 
-# n = int(input())
+# n = int(input())// Pascal triangle
 # a = []
 # for i in range(1, n + 1):
 #     r = []
@@ -179,3 +173,24 @@ for i in range (n-1,0,-1):
 #             r.append(a[j - 1] + a[j])
 #     print(" ".join(str(x) for x in r))
 #     a= r
+
+# r = int(input()) 
+# c = int(input())
+
+# a = []
+# b=[]
+# i = 0
+# while i < r:
+#     row = list(map(int, input().split()))
+#     a.append(row)
+#     i += 1
+# col=0
+# while col<c:
+#     temp=[]
+#     r-=1
+#     while r>=0:
+#         temp.append(a[r][col])
+#         r-=1
+#     b.append(temp)
+#     col+=1
+# print(b)
