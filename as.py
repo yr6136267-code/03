@@ -115,7 +115,7 @@
 #     print()
 #     i += 1
 
-# n = int(input()) // Square Spiral
+# n = int(input()) //
 # a = [[0]*n for i in range(n)]
 # t, b, l, r = 0, n-1, 0, n-1
 # num = 1
@@ -217,3 +217,17 @@
 #             ans = diff
 
 #     print(ans)
+
+A, B, C = map(int, input().split())
+cube = []
+for a in range(A):
+    block = []
+    for b in range(B):
+        row = list(map(int, input().split()))
+        block.append(row)
+    cube.append(block)
+print(cube)
+
+
+
+
