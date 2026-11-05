@@ -217,16 +217,23 @@
 #             ans = diff
 
 #     print(ans)
+# A, B, C = map(int, input().split()) // 3D list sum elements
 
-A, B, C = map(int, input().split())
-cube = []
-for a in range(A):
-    block = []
-    for b in range(B):
-        row = list(map(int, input().split()))
-        block.append(row)
-    cube.append(block)
-print(cube)
+# cube = []
+# for a in range(A):
+#     block = []
+#     for b in range(B):
+#         row = list(map(int, input().split()))
+#         block.append(row)
+#     cube.append(block)
+
+# total = 0
+# for a in range(A):
+#     for b in range(B):
+#         for c in range(C):
+#             total += cube[a][b][c]
+
+# print(total)
 
 
 
