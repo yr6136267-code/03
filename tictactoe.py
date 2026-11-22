@@ -1,12 +1,3 @@
-# """
-# Tic Tac Toe with Pygame
-
-# Controls:
-#   Click  - place your mark
-#   R      - restart the current game
-#   1      - play against the computer (you are X)
-#   2      - two players on the same computer
-# """
 import sys
 import pygame
 BOARD = 600 
@@ -28,7 +19,6 @@ LINES = [(0, 1, 2), (3, 4, 5), (6, 7, 8),
 
 
 def check_winner(board):
-    """Return (player, (start_cell, end_cell)) or None."""
     for a, b, c in LINES:
         if board[a] and board[a] == board[b] == board[c]:
             return board[a], (a, c)
@@ -40,7 +30,6 @@ def is_full(board):
 
 
 def minimax(board, player):
-    """Return (score, move). Computer is 'O' (maximizing), human is 'X'."""
     result = check_winner(board)
     if result:
         return (1, None) if result[0] == "O" else (-1, None)
@@ -151,7 +140,7 @@ def main():
 
     
         if mode == "cpu" and turn == "O" and not game_over and not check_winner(board) and not is_full(board):
-            pygame.time.delay(250)  # small pause so it feels natural
+            pygame.time.delay(250)  
             _, move = minimax(board, "O")
             board[move] = "O"
             turn = "X"
