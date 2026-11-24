@@ -355,22 +355,22 @@
 // }
 // console.log(factorial(5));
 
-Q16. Find the GCD of two numbers
-function gcd(a,b){
-  while(b!=0){
-    let temp=b;
-    b=a%b;
-    a=temp;
-  }
-  return a;
-}
-console.log(gcd(48,18));
-
-// Q17. Find the LCM of two numbers
-// function lcm(a,b){
-//   return (a*b)/gcd(a,b);
+// Q16. Find the GCD of two numbers
+// function gcd(a,b){
+//   while(b!=0){
+//     let temp=b;
+//     b=a%b;
+//     a=temp;
+//   }
+//   return a;
 // }
-// console.log(lcm(12,18));
+// console.log(gcd(48,18));
+
+Q17. Find the LCM of two numbers
+function lcm(a,b){
+  return (a*b)/gcd(a,b);
+}
+console.log(lcm(12,18));
 
 // Q18. Check if a string is a palindrome
 // function isPalindrome(str){
