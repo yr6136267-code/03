@@ -345,26 +345,26 @@
 //     }
 //   }}
 
-Q15. Find the factorial of a number
-function factorial(n){
-  let f=1;
-  for(let i=1;i<=n;i++){
-    f=f*i
-  }
-  return f;
-}
-console.log(factorial(5));
-
-// Q16. Find the GCD of two numbers
-// function gcd(a,b){
-//   while(b!=0){
-//     let temp=b;
-//     b=a%b;
-//     a=temp;
+// Q15. Find the factorial of a number
+// function factorial(n){
+//   let f=1;
+//   for(let i=1;i<=n;i++){
+//     f=f*i
 //   }
-//   return a;
+//   return f;
 // }
-// console.log(gcd(48,18));
+// console.log(factorial(5));
+
+Q16. Find the GCD of two numbers
+function gcd(a,b){
+  while(b!=0){
+    let temp=b;
+    b=a%b;
+    a=temp;
+  }
+  return a;
+}
+console.log(gcd(48,18));
 
 // Q17. Find the LCM of two numbers
 // function lcm(a,b){
